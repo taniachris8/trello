@@ -1,0 +1,164 @@
+body {
+  background-color: rgb(46, 83, 187);
+  color: rgb(66, 66, 66);
+  font-size: 10px;
+}
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 30%;
+  background-color: rgb(177, 177, 177);
+  padding: 10px;
+  align-items: flex-start;
+  border-radius: 2px;
+  box-sizing: border-box;
+  gap: 5px;
+  min-height: 100px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(66, 66, 66);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  align-items: flex-start;
+  border-radius: 2px;
+  box-sizing: border-box;
+  gap: 5px;
+
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 2px;
+  width: 100%;
+  min-height: 30px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(139, 139, 139);
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 8px;
+  margin: 0;
+}
+
+.delete-btn {
+  display: none;
+}
+
+.delete-btn.active {
+  display: block;
+  font-size: 8px;
+  border: none;
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(102, 102, 102);
+  font-size: 10px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn.overlapped {
+  display: none;
+}
+
+.new-card-form {
+  display: none;
+}
+
+.new-card-form.active {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 90%;
+  font-size: 8px;
+  color: gray;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 2px;
+  min-height: 40px;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid rgb(139, 139, 139);
+}
+
+textarea:focus {
+  outline: 1px solid rgb(56, 56, 56);
+}
+
+textarea::placeholder {
+  font-size: 8px;
+}
+
+.input.invalid {
+  border: 1px solid rgb(192, 17, 17);
+}
+
+.buttons {
+  display: flex;
+}
+
+.add-btn {
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: 8px;
+  width: 50px;
+  height: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.close-btn {
+  font-size: 10px;
+  border: none;
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+}
