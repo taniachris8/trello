@@ -25,7 +25,6 @@ export default class NewCardForm {
 
     this.closeBtn.addEventListener("click", this.close);
     this.form.addEventListener("submit", this.addCard);
-
   }
 
   open() {
@@ -46,19 +45,22 @@ export default class NewCardForm {
 
     const text = this.input.value.trim();
 
-    if (text !== "") {
+    if (this.text !== "") {
       if (this.input.classList.contains("invalid")) {
         this.input.classList.remove("invalid");
       }
-      const card = new Card(text, this.parentElement);
+      const card = new Card(
+        text,
+        this.parentElement.querySelector(".cards-container")
+      );
       card.bindToDOM();
 
-       let cards = JSON.parse(localStorage.getItem("cards")) || [];
-       cards.push({
-         column: this.parentElement.querySelector(".title").textContent,
-         text: text,
-       });
-       localStorage.setItem("cards", JSON.stringify(cards));
+      let cards = JSON.parse(localStorage.getItem("cards")) || [];
+      cards.push({
+        column: this.parentElement.querySelector(".title").textContent,
+        text: text,
+      });
+      localStorage.setItem("cards", JSON.stringify(cards));
 
       this.close();
     } else {

@@ -1,3 +1,5 @@
+export let draggedCard = null;
+
 export default class Card {
   constructor(task, parentElement) {
     this.task = task;
@@ -5,7 +7,7 @@ export default class Card {
 
     this.card = null;
     this.deleteBtn = null;
-    
+
     this.displayDeleteBtn = this.displayDeleteBtn.bind(this);
     this.hideDeleteBtn = this.hideDeleteBtn.bind(this);
     this.delete = this.delete.bind(this);
@@ -26,9 +28,17 @@ export default class Card {
     this.card.addEventListener("mouseout", this.hideDeleteBtn);
     this.deleteBtn.addEventListener("click", this.delete);
 
-    this.card.addEventListener("dragstart", (e) => {
+    this.card.addEventListener("dragstart", () => {
+      this.card.classList.add("dragged");
       console.log("dragstart");
-      e.dataTransfer.setData("text/plain", this.task);
+      draggedCard = this.card;
+    });
+
+    this.card.addEventListener("dragend", () => {
+      if (!draggedCard) return;
+      console.log("dragend");
+      this.card.classList.remove("dragged");
+      draggedCard = null;
     });
   }
 
@@ -42,7 +52,8 @@ export default class Card {
 
   delete() {
     const text = this.card.querySelector(".card-text").textContent;
-    const column = this.parentElement.querySelector(".title").textContent;
+    const columnEl = this.parentElement.closest(".column");
+    const column = columnEl.querySelector(".title").textContent;
 
     let cards = JSON.parse(localStorage.getItem("cards")) || [];
     cards = cards.filter(
