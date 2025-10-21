@@ -9,7 +9,7 @@
 body {
   background-color: rgb(62, 136, 90);
   color: rgb(66, 66, 66);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .container {
@@ -28,16 +28,15 @@ body {
   position: relative;
   width: 30%;
   background-color: rgba(192, 192, 192, 0.678);
-  padding: 10px;
+  padding: 20px;
   align-items: flex-start;
-  border-radius: 2px;
+  border-radius: 3px;
   box-sizing: border-box;
-  gap: 5px;
-  min-height: 500px;
+  min-height: 700px;
 }
 
 .title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(66, 66, 66);
@@ -51,9 +50,9 @@ body {
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
-  border-radius: 2px;
+  border-radius: 3px;
   box-sizing: border-box;
-  gap: 5px;
+  gap: 10px;
   margin-bottom: 10px;
 }
 
@@ -62,17 +61,17 @@ body {
   justify-content: space-between;
   box-sizing: border-box;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 3px;
   width: 100%;
-  min-height: 30px;
-  padding: 8px;
+  min-height: 50px;
+  padding: 16px;
   border-bottom: 1px solid rgb(139, 139, 139);
   cursor: grab;
 }
 
 .placeholder {
   border: 1px solid rgb(136, 136, 136);
-  border-radius: 2px;
+  border-radius: 3px;
   width: 100%;
 }
 
@@ -87,12 +86,12 @@ body {
 
 .delete-btn.active {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   border: none;
   background-color: transparent;
   color: rgb(192, 17, 17);
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .btn {
@@ -100,7 +99,7 @@ body {
   border: none;
   background-color: transparent;
   color: rgb(102, 102, 102);
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   padding: 0;
 }
@@ -117,7 +116,7 @@ body {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   width: 100%;
   box-sizing: border-box;
   justify-content: flex-start;
@@ -126,14 +125,14 @@ body {
 
 .input {
   width: 100%;
-  font-size: 12px;
-  min-height: 40px;
+  font-size: 14px;
+  min-height: 70px;
   color: gray;
   box-sizing: border-box;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 3px;
   border: none;
-  padding: 5px;
+  padding: 10px;
   border-bottom: 1px solid rgb(139, 139, 139);
 }
 
@@ -142,7 +141,7 @@ textarea:focus {
 }
 
 textarea::placeholder {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .input.invalid {
@@ -157,16 +156,16 @@ textarea::placeholder {
   background-color: green;
   border: none;
   color: white;
-  font-size: 12px;
-  width: 80px;
-  height: 30px;
-  border-radius: 2px;
+  font-size: 14px;
+  width: 92px;
+  height: 40px;
+  border-radius: 3px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .close-btn {
-  font-size: 14px;
+  font-size: 18px;
   border: none;
   background-color: transparent;
   color: rgb(192, 17, 17);
