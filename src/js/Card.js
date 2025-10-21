@@ -30,13 +30,11 @@ export default class Card {
 
     this.card.addEventListener("dragstart", () => {
       this.card.classList.add("dragged");
-      console.log("dragstart");
       draggedCard = this.card;
     });
 
     this.card.addEventListener("dragend", () => {
       if (!draggedCard) return;
-      console.log("dragend");
       this.card.classList.remove("dragged");
       draggedCard = null;
     });

@@ -47,8 +47,8 @@ window.addEventListener("load", () => {
   });
 });
 
-/////////////////////////////////////
 const cardsContainers = document.querySelectorAll(".cards-container");
+
 const placeholder = document.createElement("div");
 placeholder.classList.add("placeholder");
 

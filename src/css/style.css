@@ -65,9 +65,9 @@ body {
   border-radius: 2px;
   width: 100%;
   min-height: 30px;
-  padding: 5px;
+  padding: 8px;
   border-bottom: 1px solid rgb(139, 139, 139);
-  cursor: pointer;
+  cursor: grab;
 }
 
 .placeholder {
@@ -78,6 +78,7 @@ body {
 
 .card.dragged {
   opacity: 0.5;
+  cursor: grabbing;
 }
 
 .delete-btn {
@@ -91,6 +92,7 @@ body {
   background-color: transparent;
   color: rgb(192, 17, 17);
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .btn {
