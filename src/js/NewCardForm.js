@@ -45,7 +45,7 @@ export default class NewCardForm {
 
     const text = this.input.value.trim();
 
-    if (this.text !== "") {
+    if (text !== "") {
       if (this.input.classList.contains("invalid")) {
         this.input.classList.remove("invalid");
       }
